@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
+
+// registrar 'locale' para idiomas
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+registerLocaleData(localeEs, 'es-US');
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -33,7 +38,11 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
 
   ],
   providers: [
-    HeroesService
+    HeroesService,
+    {
+      provide: LOCALE_ID,
+      useValue: 'es-US'
+    }
   ],
   bootstrap: [AppComponent]
 })
