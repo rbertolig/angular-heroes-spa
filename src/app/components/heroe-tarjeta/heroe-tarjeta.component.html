@@ -1,0 +1,14 @@
+<div class="card animated fadeIn fast">
+    <img src="{{heroe.img}}" [routerLink]="['/heroe', heroe.id]" class="card-img-top" alt="{{heroe.nombre}}">
+    <div class="card-body">
+        <h5 class="card-title">{{heroe.nombre}}</h5>
+        <p class="card-text">{{heroe.bio}}</p>
+        <p class="card-text"><small class="text-muted">{{heroe.aparicion | date:'MMMM - y' }}</small></p>
+        <!-- llamar ruta pasando parametro usando una funcion cuando se hace click en el boton -->
+        <button (click)="verHeroe()" type="button" class="btn btn-outline-primary btn-block">
+        Ver mas...
+      </button>
+        <!-- llamar una ruta en link pasando parametro -->
+        <!-- <a [routerLink]="['/heroe', heroe.id]" routerLinkActive="router-link-active" class="btn btn-outline-primary">Ver mas link...</a> -->
+    </div>
+</div>

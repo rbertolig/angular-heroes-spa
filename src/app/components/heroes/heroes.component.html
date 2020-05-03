@@ -1,0 +1,17 @@
+<h1>Heroes <small>Marvel & DC</small></h1>
+<hr>
+<div *ngIf="miTxtBuscar" class="alert alert-success" role="alert">
+    <strong>Buscando: </strong>{{miTxtBuscar}}
+</div>
+<div *ngIf="sinResultadosDeBusqueda" class="alert alert-warning" role="alert">
+    <strong>No se encontraron resultados!</strong> modifique la búsqueda
+</div>
+
+<!-- clase tarjetas de bootstrap4 -->
+<div class="card-columns">
+    <!-- renderizar tarjetas usando *ngFor y codigo html de otro componente -->
+    <!-- el componente 'child' se inserta con sus etiquetas y se enlazan las variables -->
+    <!-- "[heroe] = "heroeLocal"  mapea la propiedad "heroe" del componente app-heroe-tarjeta heroeLocal de este-->
+    <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="heroeLocal" [index]="heroeLocal.id" *ngFor="let heroeLocal of heroes; let i =index"></app-heroe-tarjeta>
+
+</div>
