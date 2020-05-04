@@ -4,7 +4,10 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 // registrar 'locale' para idiomas
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
+import localeFr from '@angular/common/locales/fr';
+
 registerLocaleData(localeEs, 'es-US');
+registerLocaleData(localeFr, 'fr-FR');
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';

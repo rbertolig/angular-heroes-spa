@@ -1,7 +1,7 @@
 <div class="card animated fadeIn fast">
     <!-- puedo hacer binding directo a propiedades del DOM usando [] o bind--->
     <!-- ejemplo, para hacerlo a src="" y alt="", uso [src]="" o bind-alt="" -->
-    <img [src]="heroe.img" [routerLink]="['/heroe', heroe.id]" class="card-img-top" bind-alt="heroe.nombre">
+    <img [src]="heroe.img" [routerLink]="['/heroe', heroe.id]" class="card-img-top puntero" bind-alt="heroe.nombre">
     <div class="card-body">
         <h5 class="card-title">{{heroe.nombre}}</h5>
         <p class="card-text">{{heroe.bio}}</p>
